@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Activity.DienthoaiActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Điện thoại"
+        android:id="@+id/toolbardienthoai"
+        app:titleTextColor="#FFFEFE"
+        android:background="#F2989594"/>
+    <!-- Search View -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchViewDienThoai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Tìm kiếm điện thoại..." />
+
+    <!-- Buttons for sorting by price -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btndtGiaduoi20tr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giá dưới 20 triệu" />
+
+        <Button
+            android:id="@+id/btndtGiatren20tr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giá trên 20 triệu"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/listviewdienthoai"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

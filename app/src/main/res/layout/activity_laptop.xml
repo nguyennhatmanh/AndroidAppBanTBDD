@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Activity.LaptopActivity">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Laptop"
+        android:id="@+id/toolbarLaptop"
+        app:titleTextColor="#FFFEFE"
+        android:background="#F2989594" />
+
+    <!-- Search View -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchViewLaptop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Tìm kiếm laptop..." />
+
+    <!-- Buttons for sorting by price -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnGiaduoi10tr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giá dưới 20 triệu" />
+
+        <Button
+            android:id="@+id/btnGiatren10tr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giá trên 20 triệu"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+
+    <!-- List View for displaying laptop items -->
+    <ListView
+        android:id="@+id/listviewLaptop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
